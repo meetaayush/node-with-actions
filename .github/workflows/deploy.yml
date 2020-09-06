@@ -24,11 +24,7 @@ jobs:
           git config user.name "${{ secrets.G_USERNAME }}"
           git add .
           git commit -m "environment variables"
-      - name: fetch from master
-        run: |
           git fetch origin master
-      - name: push code to master
-        run: |
           git push origin HEAD:master
       - name: Install npm
         run: |
