@@ -34,5 +34,5 @@ jobs:
           registry: docker.pkg.github.com
           username: ${{ github.repository_owner }}
           password: ${{ secrets.GITHUB_TOKEN }}
-        script: |
-          docker pull docker.pkg.github.com/meetaayush/node-with-actions/node-with-actions:latest
+          script: |
+            docker pull docker.pkg.github.com/meetaayush/node-with-actions/node-with-actions:latest
