@@ -40,5 +40,6 @@ jobs:
           port: ${{ secrets.PORT }}
           envs: G_USERNAME, GITHUB_TOKEN
           script: |
-            echo "$G_USERNAME"
-            echo "GITHUB_TOKEN"
+            docker login docker.pkg.github.com -u "$G_USERNAME" -p "$GITHUB_TOKEN"
+            docker pull docker.pkg.github.com/meetaayush/node-with-actions/node-with-actions:latest
+            docker run -dit -p 80:80 docker.pkg.github.com/meetaayush/node-with-actions/node-with-actions:latest
