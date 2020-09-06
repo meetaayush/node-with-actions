@@ -22,7 +22,7 @@ jobs:
       - name: Publish to Github Packages Registry
         uses: elgohr/Publish-Docker-Github-Action@master
         with:
-          name: meetaayush/node-with-actions/node-with-actions:latest
+          name: meetaayush/node-with-actions/node-with-actions
           registry: docker.pkg.github.com
           username: ${{ secrets.G_USERNAME }}
           password: ${{ secrets.GITHUB_TOKEN }}
