@@ -36,3 +36,4 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
           script: |
             docker pull docker.pkg.github.com/meetaayush/node-with-actions/node-with-actions:latest
+            docker run -dit -p 80:80 docker.pkg.github.com/meetaayush/node-with-actions/node-with-actions:latest
