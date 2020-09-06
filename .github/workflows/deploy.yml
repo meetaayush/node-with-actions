@@ -18,6 +18,7 @@ jobs:
         run: |
           touch .env
           echo PORT_APP=${{ secrets.PORT_APP }} >> .env
+          cat .env
       - name: Push .env to directory
         run: |
           git config user.email "${{ secrets.EMAIL }}"
