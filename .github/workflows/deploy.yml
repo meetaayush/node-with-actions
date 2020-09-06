@@ -14,6 +14,16 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: "13.10"
+      - name: Create .env file
+        run: |
+          touch .env
+          echo PORT=${{ secrets.PORT }} >> .env
+      - name: Push .env to directory
+        run: |
+          git config user.email "${{ secrets.PORT }}"
+          git config user.name "${{ secrets.G_USERNAME }}"
+          git add .
+          git commit -m "environment variables"
       - name: Install npm
         run: |
           npm install
