@@ -8,3 +8,7 @@ app.get("/", (req, res) => {
 const PORT = process.env.PORT || 8001;
 
 app.listen(PORT, () => console.log(`SERVER IS RUNNING AT PORT ${PORT}`));
+
+process.on("SIGINT", function () {
+  process.exit(0);
+});
