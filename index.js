@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 
 app.get("/", (req, res) => {
-  res.send({ msg: "SOME RANDOM TEXT THIS TIME", port: process.env.PORT_APP });
+  res.json({ msg: "SOME RANDOM TEXT THIS TIME", port: process.env.PORT_APP });
 });
 
 const PORT = process.env.PORT_APP || 80;
