@@ -5,7 +5,7 @@ app.get("/", (req, res) => {
   res.send({ msg: "Testing if this works" });
 });
 
-const PORT = process.env.PORT || 80;
+const PORT = process.env.PORT_APP;
 
 app.listen(PORT, () => console.log(`SERVER IS RUNNING AT PORT ${PORT}`));
 
