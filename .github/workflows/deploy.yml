@@ -14,9 +14,6 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: "13.10"
-      - name: Delete gitignore
-        run: |
-          rm .gitignore
       - name: Create .env file
         run: |
           touch .env
